@@ -151,6 +151,7 @@
     <ClCompile Include="ActorArray.cpp" />
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="Agent1.cpp" />
+    <ClCompile Include="Agent1StateMachine.cpp" />
     <ClCompile Include="Agent2.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
@@ -177,6 +178,7 @@
     <ClInclude Include="ActorArray.h" />
     <ClInclude Include="Agent.h" />
     <ClInclude Include="Agent1.h" />
+    <ClInclude Include="Agent1StateMachine.h" />
     <ClInclude Include="Agent2.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="CircleCollider.h" />
