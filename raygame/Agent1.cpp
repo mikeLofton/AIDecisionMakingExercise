@@ -23,8 +23,9 @@ void Agent1::start()
 	Character::start();
 	//add steering behaviours here
 	m_moveComp = addComponent<MoveComponent>();
+	m_moveComp->setMaxSpeed(300);
 	SeekMLComponent* seekComp = new SeekMLComponent();
-	seekComp->setSteeringForce(50);
+	seekComp->setSteeringForce(100);
 
 	Agent1StateMachine* stateMachine = new Agent1StateMachine();
 
