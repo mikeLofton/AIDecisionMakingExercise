@@ -20,8 +20,3 @@ MathLibrary::Vector2 SeekTTComponent::calculateForce()
 
 	return seekForce;
 }
-
-MathLibrary::Vector2 SeekTTComponent::calculateForce()
-{
-	return MathLibrary::Vector2();
-}

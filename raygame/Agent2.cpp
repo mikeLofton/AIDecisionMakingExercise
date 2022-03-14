@@ -24,10 +24,13 @@ void Agent2::start()
 	MoveComponent* moveComp = new MoveComponent();
 	m_moveComponent = addComponent<MoveComponent>();
 	m_moveComponent->setMaxSpeed(500);
-	
+	SeekTTComponent* seekComp = new SeekTTComponent();
+	seekComp->setSteeringForce(50);
+
+	StateMachineTTComponent* stateComp = new StateMachineTTComponent();
+	addComponent(stateComp);
+	addComponent(seekComp);
 	addComponent(moveComp);
-	addComponent<SteeringComponent>();
-	addComponent<StateMachineTTComponent>();
 }
 
 void Agent2::update(float deltaTime)
