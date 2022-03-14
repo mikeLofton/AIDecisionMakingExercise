@@ -157,6 +157,7 @@
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="FleeTTComponent.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Goal.cpp" />
     <ClCompile Include="InputComponent.cpp" />
@@ -168,6 +169,7 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SeekTTComponent.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
+    <ClCompile Include="StateMachineTTComponent.cpp" />
     <ClCompile Include="Transform2D.cpp" />
     <ClCompile Include="UITextComponent.cpp" />
   </ItemGroup>
@@ -183,6 +185,7 @@
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="FleeTTComponent.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Goal.h" />
     <ClInclude Include="InputComponent.h" />
@@ -193,6 +196,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SeekTTComponent.h" />
     <ClInclude Include="SpriteComponent.h" />
+    <ClInclude Include="StateMachineTTComponent.h" />
     <ClInclude Include="SteeringComponent.h" />
     <ClInclude Include="Transform2D.h" />
     <ClInclude Include="UITextComponent.h" />

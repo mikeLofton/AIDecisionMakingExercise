@@ -86,6 +86,12 @@
     <ClCompile Include="SeekTTComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
+    <ClCompile Include="StateMachineTTComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FleeTTComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h">
@@ -158,6 +164,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SeekTTComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachineTTComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FleeTTComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>

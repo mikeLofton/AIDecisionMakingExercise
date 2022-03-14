@@ -19,6 +19,13 @@ public:
     virtual void update(float deltaTime) override;
     virtual void onDeath();
     virtual void onDamageRecieved() {};
+    void onAddComponent(Component* component) override;
+
+private:
+    MoveComponent* m_moveComponent;
+    DynamicArray<SteeringComponent*> m_steeringComponents;
+    SeekTTComponent* m_seekComponent;
+    MathLibrary::Vector2 m_force;
 };
 
 
