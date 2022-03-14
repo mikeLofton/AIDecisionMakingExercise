@@ -2,6 +2,9 @@
 #include "SpriteComponent.h"
 #include "GameManager.h"
 #include "Goal.h"
+#include "MoveComponent.h"
+#include "SteeringComponent.h"
+#include "SeekTTComponent.h"
 
 Agent2::Agent2(float x, float y, const char* name, float maxForce, float maxSpeed, float health) : Character(x, y, name, maxForce, maxSpeed, health)
 {
@@ -16,6 +19,10 @@ void Agent2::onCollision(Actor* actor)
 void Agent2::start()
 {
 	Character::start(); 
+	
+	GameManager* manger = GameManager::getInstance();
+	manger->getLeftGoal();
+	
 	//add steering behaviours here
 }
 
