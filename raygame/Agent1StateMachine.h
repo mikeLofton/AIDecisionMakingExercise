@@ -4,8 +4,8 @@
 enum State
 {
 	IDLE,
-	ChaseBall,
-	ChaseGoal
+	CHASEBALL,
+	CHASEGOAL
 };
 
 class SeekMLComponent;

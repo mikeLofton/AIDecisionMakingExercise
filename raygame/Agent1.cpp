@@ -5,6 +5,7 @@
 #include "SeekMLComponent.h"
 #include "MoveComponent.h"
 #include "SteeringComponent.h"
+#include "Agent1StateMachine.h"
 
 Agent1::Agent1(float x, float y, const char* name, float maxForce, float maxSpeed, float health) : Character(x, y, name, maxForce, maxSpeed, health)
 {
@@ -22,10 +23,12 @@ void Agent1::start()
 	//add steering behaviours here
 	m_moveComp = addComponent<MoveComponent>();
 	SeekMLComponent* seekComp = new SeekMLComponent();
-	seekComp->setSteeringForce(100);
+	seekComp->setSteeringForce(50);
 
+	Agent1StateMachine* stateMachine = new Agent1StateMachine();
 
 	addComponent(seekComp);
+	addComponent(stateMachine);
 }
 
 void Agent1::update(float deltaTime)
