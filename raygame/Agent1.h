@@ -1,5 +1,9 @@
 #pragma once
 #include "Character.h"
+#include"ActorArray.h"
+#include <Vector2.h>
+class MoveComponent;
+class SteeringComponent;
 
 class Agent1 :
     public Character
@@ -19,5 +23,14 @@ public:
     virtual void update(float deltaTime) override;
     virtual void onDeath();
     virtual void onDamageRecieved() {};
+
+    MathLibrary::Vector2 getForce() { return m_force; }
+    void setForce(MathLibrary::Vector2 value) { m_force = value; }
+    MoveComponent* getMoveComp() { return m_moveComp; }
+    void onAddComponent(Component* comp) override;
+private:
+    DynamicArray<SteeringComponent*> m_steeringBehaviors;
+    MoveComponent* m_moveComp;
+    MathLibrary::Vector2 m_force;
 };
 
