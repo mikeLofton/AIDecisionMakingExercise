@@ -89,6 +89,9 @@
     <ClCompile Include="Agent1StateMachine.cpp">
       <Filter>Components</Filter>
     </ClCompile>
+    <ClCompile Include="MLSword.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h">
@@ -165,6 +168,9 @@
     </ClInclude>
     <ClInclude Include="Agent1StateMachine.h">
       <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MLSword.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
