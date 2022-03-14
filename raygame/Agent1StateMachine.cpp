@@ -3,6 +3,7 @@
 #include "Actor.h"
 #include "Transform2D.h"
 #include "GameManager.h"
+#include "Character.h"
 
 void Agent1StateMachine::start()
 {
@@ -31,7 +32,9 @@ void Agent1StateMachine::update(float deltaTime)
 
 		m_seekComp->setTarget(GameManager::getInstance()->getBall());
 
-		if (GameManager::getInstance()->getBall()->getActive() == false)
+		if (GameManager::getInstance()->getAgent2()->getHasBall() == true)
+			setCurrentState(CHASEOPPONENT);
+		else if (GameManager::getInstance()->getBall()->getActive() == false)
 			setCurrentState(CHASEGOAL);
 
 		break;
@@ -41,9 +44,19 @@ void Agent1StateMachine::update(float deltaTime)
 
 		m_seekComp->setTarget((Actor*)GameManager::getInstance()->getRightGoal());
 
-		if (GameManager::getInstance()->getBall()->getActive() == true)
+		if (GameManager::getInstance()->getAgent2()->getHasBall() == true)
+			setCurrentState(CHASEOPPONENT);
+		else if (GameManager::getInstance()->getBall()->getActive() == true)
 			setCurrentState(CHASEBALL);
 
 		break;
+
+	case CHASEOPPONENT:
+		m_seekComp->setSteeringForce(m_seekForce + 20);
+
+		m_seekComp->setTarget((Actor*)GameManager::getInstance()->getAgent2());
+
+		if (GameManager::getInstance()->getAgent2()->getIsAlive() == false)
+			setCurrentState(CHASEBALL);
 	}
 }

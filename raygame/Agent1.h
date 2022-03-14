@@ -28,6 +28,7 @@ public:
     void setForce(MathLibrary::Vector2 value) { m_force = value; }
     MoveComponent* getMoveComp() { return m_moveComp; }
     void onAddComponent(Component* comp) override;
+    void initializeSwords();
 private:
     DynamicArray<SteeringComponent*> m_steeringBehaviors;
     MoveComponent* m_moveComp;

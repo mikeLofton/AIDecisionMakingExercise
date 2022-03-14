@@ -6,6 +6,7 @@
 #include "MoveComponent.h"
 #include "SteeringComponent.h"
 #include "Agent1StateMachine.h"
+#include "MLSword.h"
 
 Agent1::Agent1(float x, float y, const char* name, float maxForce, float maxSpeed, float health) : Character(x, y, name, maxForce, maxSpeed, health)
 {
@@ -56,4 +57,11 @@ void Agent1::onAddComponent(Component* comp)
 
 	if (steeringComp)
 		m_steeringBehaviors.addItem(steeringComp);
+}
+
+void Agent1::initializeSwords()
+{
+	MLSword* sword1 = new MLSword(this, 1, 1, "Sword1");
+	MLSword* sword2 = new MLSword(this, 1, 1, "Sword2");
+	MLSword* sword3 = new MLSword(this, 1, 1, "Sword3");
 }
